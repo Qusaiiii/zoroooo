@@ -227,7 +227,7 @@ function isYoutube(str) {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
      .addField(`**__أوامر البوت__**`,`
-.    **${prefix}play**
+     **${prefix}play**
    امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
      **${prefix}stop**
         ايقاف الاغنية 
