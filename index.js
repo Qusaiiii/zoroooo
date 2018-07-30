@@ -7,7 +7,7 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '*';
+const prefix = '$';
 client.on('ready', function() {
     console.log(`i am ready ${client.user.username}`);
 });
@@ -255,7 +255,7 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id !== "327042370644213761","324672376455299074") return;
+  if (message.author.id !== "327042370644213761") return;
 
   
   if (message.content.startsWith(prefix + 'setwatch')) {
@@ -275,7 +275,7 @@ client.on('message', message => {
 if (message.content.startsWith(prefix + 'setname')) {
   client.user.setUsername(argresult).then
       message.channel.sendMessage(`Username Changed To **${argresult}**`)
-  return message.reply("You Can change the username 2 times per hour.");
+  return message.reply("You Can change the username 2 times per hour");
 } 
 
 if (message.content.startsWith(prefix + 'setavatar')) {
