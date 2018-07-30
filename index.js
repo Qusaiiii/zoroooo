@@ -135,7 +135,7 @@ client.on('message', function(message) {
         var server = server = servers[message.guild.id];
         if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
     }
-    else if (mess.startsWith(prefix + 'move')) 
+    else if (mess.startsWith(prefix + 'move')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.member.voiceChannel.join().then(message.channel.send(':ok:'));
     }
@@ -227,19 +227,19 @@ function isYoutube(str) {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
      .addField(`**__أوامر البوت__**`,`
-.    **${prefix}play
+.    **${prefix}play**
    امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
-       ${prefix}stop
+     **${prefix}stop**
         ايقاف الاغنية 
-       ${prefix}skip
+     **${prefix}skip**
      امر تخطي الاغنية
-       ${prefix}vol
+     **${prefix}vol**
     تغير مستوى الصوت 1 - 100
-       ${prefix}pause
+     **${prefix}pause**
       ايقاف الاغنية مؤقتا 
-       ${prefix}resume
+     **${prefix}resume**
        امر تكملة الاغنية
-       ${prefix}move
+     **${prefix}move**
    سحب البوت او ادخال البوت الى روم
    
      prefix = ${prefix}
@@ -249,7 +249,6 @@ function isYoutube(str) {
      }
     });
 	
-
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
